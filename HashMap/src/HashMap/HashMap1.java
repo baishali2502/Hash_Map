@@ -39,4 +39,24 @@ public class HashMap1 {
 			System.out.println("Word: "+key+" Freq : "+map.get(key));
 		}
 	}
+	/*
+	 * @desc:This function removes a particular word from the string
+	 * 
+	 * @params:The string and the word to be removed from the string
+	 * 
+	 * @returns:The new string
+	 */
+	public static String removeWords(String str, String word)
+	{
+		String ans = "";
+		String[] arr = str.split(" ");
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i].equals(word))
+				continue;
+			else
+				ans+=arr[i]+" ";
+		}
+		return ans;
+	}
 }
